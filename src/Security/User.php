@@ -76,7 +76,7 @@ class User
 		?IUserStorage $legacyStorage = null,
 		?IAuthenticator $authenticator = null,
 		?Authorizator $authorizator = null,
-		?UserStorage $storage = null
+		?UserStorage $storage = null,
 	) {
 		$this->storage = $storage ?? $legacyStorage; // back compatibility
 		if (!$this->storage) {
