@@ -161,6 +161,11 @@ class User
 	 */
 	final public function isLoggedIn(): bool
 	{
+		$storage = $this->getStorage();
+		if ($storage instanceof IUserStorage) {
+			return $storage->isAuthenticated();
+		}
+
 		if ($this->authenticated === null) {
 			$this->getStoredData();
 		}
@@ -174,6 +179,11 @@ class User
 	 */
 	final public function getIdentity(): ?IIdentity
 	{
+		$storage = $this->getStorage();
+		if ($storage instanceof IUserStorage) {
+			return $storage->getIdentity();
+		}
+
 		if ($this->authenticated === null) {
 			$this->getStoredData();
 		}
