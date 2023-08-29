@@ -1,5 +1,5 @@
 {
-	"name": "involve-digital/security",
+	"name": "nette/security",
 	"description": "🔑 Nette Security: provides authentication, authorization and a role-based access control management via ACL (Access Control List)",
 	"keywords": ["nette", "authentication", "authorization", "ACL"],
 	"homepage": "https://nette.org",
